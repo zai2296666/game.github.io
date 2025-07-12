@@ -21,8 +21,36 @@ tw-story {
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="游戏介绍" tags="zai" position="625,125" size="100,100">你的角色： 你不是主角陈平安。你扮演的是被陈平安请来帮忙照看家业的 “米大剑仙”——周米粒的哥哥/姐姐（这个身份在原著里不存在，是我为了方便游戏而创造的）。你武力不高，但心思细腻，擅长烹饪和安抚人心。
+/* 针对小屏幕（手机）的样式 */
+@media screen and (max-width: 600px) {
+  tw-passage {
+    font-size: 16px; /* 调整手机上的字体大小 */
+    padding: 1em; /* 调整手机上的内边距 */
+  }
+}
+/* --- 强制全屏宽度，去除白边 --- */
+tw-story {
+  max-width: 100%; /* 允许故事区域扩展到100%宽度 */
+  padding: 0;      /* 去除故事区域的外边距 */
+}
+
+tw-passage {
+  margin: 0 auto;  /* 让段落内容居中 */
+  max-width: 100%; /* 允许段落内容扩展到100%宽度 */
+  padding: 1.5em;  /* 给段落内容一些内边距，让文字不贴着屏幕边缘 */
+  box-sizing: border-box; /* 让内边距包含在宽度内，防止溢出 */
+}
+
+/* --- 针对手机等小屏幕的优化 --- */
+@media screen and (max-width: 600px) {
+  tw-passage {
+    padding: 1em; /* 在手机上，内边距可以小一点 */
+    font-size: 16px; /* 为手机设置一个舒适的字体大小 */
+  }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="游戏介绍" tags="zai" position="625,125" size="100,100">（此游戏如有侵权，立马删除）         邮箱号：3262908929@qq.com
+
+你的角色： 你不是主角陈平安。你扮演的是被陈平安请来帮忙照看家业的 “米大剑仙”——周米粒的哥哥/姐姐（这个身份在原著里不存在，是我为了方便游戏而创造的）。你武力不高，但心思细腻，擅长烹饪和安抚人心。
 核心目标： 在陈平安外出远游期间，照顾好正在长身体、心思敏感的裴钱，处理她在山上惹出的各种“麻烦”，引导她成长。
 核心玩法：
 事件选择系统： 游戏通过一个个小事件来推进。每个事件都有2-3个选项，你的选择会影响几个核心数值。
@@ -703,3 +731,4 @@ h(Math,"asinh",xr.asinh,Math.asinh(1e300)===Infinity);h(Math,"atanh",xr.atanh,Ma
 
 </body>
 </html>
+
