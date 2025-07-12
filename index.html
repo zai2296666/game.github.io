@@ -9,7 +9,21 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 游戏制作.</tw-noscript></noscript></tw-story>
-<tw-storydata name="游戏制作" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="D0F38735-79E3-4226-8DC2-A1E5D7EE1FB1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="游戏介绍" tags="" position="625,150" size="100,100">你的角色： 你不是主角陈平安。你扮演的是被陈平安请来帮忙照看家业的 “米大剑仙”——周米粒的哥哥/姐姐（这个身份在原著里不存在，是我为了方便游戏而创造的）。你武力不高，但心思细腻，擅长烹饪和安抚人心。
+<tw-storydata name="游戏制作" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="D0F38735-79E3-4226-8DC2-A1E5D7EE1FB1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* --- 1. 全局默认背景 --- */
+tw-story {
+  /* 替换成你的默认背景图链接 */
+  background-image: url("https://commercial-orange-rz0hiakkea.edgeone.app/剑来壁纸_1_姜西_来自小红书网页版.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in是的-out; /* 背景切换动画 */
+}
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="游戏介绍" tags="zai" position="625,125" size="100,100">你的角色： 你不是主角陈平安。你扮演的是被陈平安请来帮忙照看家业的 “米大剑仙”——周米粒的哥哥/姐姐（这个身份在原著里不存在，是我为了方便游戏而创造的）。你武力不高，但心思细腻，擅长烹饪和安抚人心。
 核心目标： 在陈平安外出远游期间，照顾好正在长身体、心思敏感的裴钱，处理她在山上惹出的各种“麻烦”，引导她成长。
 核心玩法：
 事件选择系统： 游戏通过一个个小事件来推进。每个事件都有2-3个选项，你的选择会影响几个核心数值。
@@ -19,7 +33,7 @@ $PeiQian_Manners (裴钱的规矩值): 她是成为一个懂礼貌的宗师，�
 $Mountain_Harmony (落魄山的和谐度): 裴钱惹事会降低这个值，你需要去修复。
 
 [[我懂了，开始游戏|山主远行]]
-</tw-passagedata><tw-passagedata pid="2" name="厨房风波" tags="" position="625,400" size="100,100">(set: $PeiQian_Trust to 0)
+[Your Text Here]</tw-passagedata><tw-passagedata pid="2" name="厨房风波" tags="peiqian" position="625,400" size="100,100">(set: $PeiQian_Trust to 0)
 (set: $PeiQian_Manners to 10)
 (set: $Mountain_Harmony to 50)
 
@@ -58,7 +72,7 @@ $Mountain_Harmony (落魄山的和谐度): 裴钱惹事会降低这个值，你�
 你该如何处理这个误会？
 
 [[拉着裴钱的手，一起向暖树解释清楚|笨拙的温柔]]
-[[摸摸她的头，说：“我知道了，下次饿了直接找我。”|无声的承诺]]</tw-passagedata><tw-passagedata pid="5" name="（继续下一天）" tags="" position="650,800" size="100,100">夜深了，落魄山一片宁静，只有虫鸣和风声。
+[[摸摸她的头，说：“我知道了，下次饿了直接找我。”|无声的承诺]]</tw-passagedata><tw-passagedata pid="5" name="（继续下一天）" tags="cpa1" position="650,800" size="100,100">夜深了，落魄山一片宁静，只有虫鸣和风声。
 你处理完一天的杂务，正准备回房休息，却隐约听到后山的竹林里传来“呼…呼…”的破风声。
 这么晚了，会是谁？
 你好奇地循着声音走去，悄悄拨开一丛竹子，眼前的景象让你心头一震。
@@ -112,7 +126,7 @@ $Mountain_Harmony (落魄山的和谐度): 裴钱惹事会降低这个值，你�
 
 这是她第一次，主动提出要帮你做什么。
 
-[[（几天后，新的事件发生了）]]</tw-passagedata><tw-passagedata pid="9" name="美食的俘虏" tags="" position="850,525" size="100,100">(set: $PeiQian_Trust to $PeiQian_Trust + 2)
+[[（几天后，新的事件发生了）]]</tw-passagedata><tw-passagedata pid="9" name="美食的俘虏" tags="peiqian" position="850,525" size="100,100">(set: $PeiQian_Trust to $PeiQian_Trust + 2)
 (set: $PeiQian_Manners to $PeiQian_Manners - 1)
 
 你没有理会地上的碎碗，而是径直走到裴钱面前，缓缓蹲下身，让自己和她平视。
@@ -138,7 +152,7 @@ $Mountain_Harmony (落魄山的和谐度): 裴钱惹事会降低这个值，你�
 
 你虽然替她道了歉，但你也用行动告诉她，你会保护她，并引导她去面对问题。她似乎有些明白了。
 
-[[（继续下一天）]]</tw-passagedata><tw-passagedata pid="11" name="无声的承诺" tags="" position="775,650" size="100,100">(set: $PeiQian_Trust to $PeiQian_Trust + 1)
+[[（继续下一天）]]</tw-passagedata><tw-passagedata pid="11" name="无声的承诺" tags="peiqian" position="775,650" size="100,100">(set: $PeiQian_Trust to $PeiQian_Trust + 1)
 
 你没有再提道歉的事。你只是伸出手，轻轻地、有些笨拙地摸了摸裴钱的头。她的头发有些干枯，但很柔软。
 “我知道了。” 你说，“这不是你的错。下次饿了，或者想吃什么了，就直接来找我，好不好？我随时都在。”
@@ -192,7 +206,7 @@ $Mountain_Harmony (落魄山的和谐度): 裴钱惹事会降低这个值，你�
 
 你站在院子里，感觉有些尴尬。你息事宁人，却好像失去了更重要的东西。裴钱对你刚刚建立起来的一点点信任，似乎又倒退回了原点。
 
-[[（事情就这样过去了）|三天之后]]</tw-passagedata><tw-passagedata pid="15" name="山主远行" tags="" position="625,275" size="100,100">set: $cui_event_happened to false
+[[（事情就这样过去了）|三天之后]]</tw-passagedata><tw-passagedata pid="15" name="山主远行" tags="cpa" position="625,275" size="100,100">set: $cui_event_happened to false
 山主陈平安又要出远门了，临走前，他把你拉到一边，郑重地嘱托道：
 “米粒的姐姐，我这次出门可能要很久。山上的事，有朱敛先生和崔东山他们，我不担心。唯独……裴钱这孩子，我放不下心。”
 他看着远处那个抱着竹刀，警惕地望着所有人的黑瘦小女孩，叹了口气。
